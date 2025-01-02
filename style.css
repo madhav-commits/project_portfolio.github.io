@@ -5,94 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design and Analysis of Algorithms</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
-            background-color: #f1f8e9; /* Light greenish background for more contrast */
-            color: #263238; /* Dark grey text for high contrast */
+            background-color: #f0f4f8; /* Light grey background */
+            color: #333; /* Dark grey text */
+            padding: 0;
         }
+
+        /* Header Styles */
         header {
-            background-color: #004d40; /* Darker teal for contrast */
-            color: #ffffff;
+            background-color: #00796b; /* Teal */
+            color: white;
             padding: 20px;
             text-align: center;
             font-size: 2em;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for separation */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
         }
+
+        header:hover {
+            background-color: #004d40; /* Darker teal on hover */
+        }
+
+        /* Navigation Styles */
         nav {
-            background-color: #00796b; /* Medium teal */
-            padding: 15px;
+            background-color: #004d40; /* Dark teal */
+            padding: 15px 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease; /* Added transition for nav background */
+            transition: background-color 0.3s ease;
         }
+
         nav a {
-            color: #ffffff;
+            color: #e0f7fa; /* Light cyan */
             text-decoration: none;
             margin: 0 20px;
             font-size: 1.2em;
-            transition: color 0.3s ease, transform 0.3s ease; /* Added transition for text and hover effect */
+            transition: color 0.3s ease;
         }
+
         nav a:hover {
-            color: #ffeb3b; /* Bright yellow on hover for high contrast */
-            transform: scale(1.1); /* Slight zoom effect */
+            color: #f4511e; /* Bright orange on hover */
         }
-        h1 {
-            color: #004d40;
-            font-size: 2.5em;
-            text-align: center;
-            margin-top: 40px;
-            text-transform: uppercase;
-        }
-        h2 {
-            color: #004d40;
-            font-size: 2em;
-            margin-top: 30px;
-            transition: color 0.3s ease; /* Smooth transition for heading colors */
-        }
-        h2:hover {
-            color: #f57c00; /* Bright orange on hover */
-        }
-        p, ul {
-            margin: 20px;
-            font-size: 1.1em;
-            line-height: 1.8;
-        }
-        ul {
-            background-color: #ffffff; /* White background for contrast */
-            border-left: 5px solid #004d40; /* Border for separation */
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for ul background and zoom */
-        }
-        ul li {
-            margin: 10px 0;
-        }
-        ul:hover {
-            background-color: #f1f8e9; /* Light green hover effect */
-            transform: scale(1.02); /* Slight zoom effect on list hover */
-        }
+
+        /* Section Styles */
         section {
             padding: 40px 20px;
             margin: 20px;
+            background-color: #ffffff; /* White background */
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            background-color: #ffffff; /* White background for contrast */
-            transition: background-color 0.3s ease; /* Transition for section background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
         }
+
         section:hover {
-            background-color: #e0f2f1; /* Light cyan on hover */
+            background-color: #e0f2f1; /* Light green background on hover */
         }
+
+        /* Title and Subtitle Styles */
+        h1, h2 {
+            color: #00796b;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        /* Paragraph and List Styles */
+        p, ul {
+            margin: 15px 0;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        ul {
+            padding-left: 20px;
+            background-color: #e0f7fa; /* Light cyan background for lists */
+            border-radius: 5px;
+            list-style-type: square;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        ul li {
+            margin: 8px 0;
+        }
+
+        /* Footer Styles */
         footer {
             background-color: #004d40;
-            color: #ffffff;
+            color: white;
             text-align: center;
             padding: 15px;
             margin-top: 30px;
-            font-size: 1.2em;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 1em;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1em;
+                margin: 0 10px;
+            }
+
+            section {
+                padding: 30px 15px;
+                margin: 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -149,5 +184,8 @@
         </ul>
     </section>
 
+    <footer>
+        &copy; 2025 Design and Analysis of Algorithms - All Rights Reserved
+    </footer>
 </body>
 </html>
