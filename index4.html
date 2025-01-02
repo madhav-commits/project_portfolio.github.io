@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code in Floating Window</title>
+    <style>
+        /* Styling for the floating window */
+        .floating-window {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 80%;
+            height: 80%;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            padding: 10px;
+            overflow: auto;
+            z-index: 9999;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .floating-window-header {
+            cursor: move;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .floating-window-content {
+            font-family: monospace;
+            font-size: 14px;
+            color: #333;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            height: calc(100% - 40px);
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="floating-window" id="codeWindow">
+    <div class="floating-window-header" id="windowHeader">
+        C++ Code (RailNetwork)
+    </div>
+    <div class="floating-window-content">
+        // RailNetwork.h
+
+        #include <vector>
+        #include <string>
+
+        // RailNetwork.cpp
+        #include <iostream>
+        #include <cmath>
+        #include <cstring>
+        #include <algorithm>
+        #include <cctype>
+        #include <stdexcept>
+        #include <queue>
+        #include <climits>
+
+        #define MAX_STATIONS 100
+        #define INF 1e9
+
+        struct AVLNode {
+            char stationName[50];
+            int crowdDensity;
+            int height;
+            AVLNode *left, *right;
+
+            AVLNode(const char *name, int crowd);
+        };
+
+        class RailNetwork {
+        private:
+            struct Station {
+                char name[50];
+                int x;
+                int y;
+                int crowdDensity;
+            };
+
+            class UnionFind {
+            public:
+                std::vector<int> parent, rank;
+                UnionFind(int n);
+                int find(int u);
+                void unite(int u, int v);
+            };
+
+            struct Edge {
+                int u, v, weight;
+                bool operator<(const Edge &other) const;
+            };
+
+            Station stations[MAX_STATIONS];
+            int adjMatrix[MAX_STATIONS][MAX_STATIONS];
+            int stationCount;
+            AVLNode* root;
+
+            int height(AVLNode *node);
+            int getBalance(AVLNode *node);
+            AVLNode *createNode(const char *stationName, int crowdDensity);
+            AVLNode *rightRotate(AVLNode *y);
+            AVLNode *leftRotate(AVLNode *x);
+            AVLNode *insert(AVLNode *node, const char *stationName, int crowdDensity);
+            AVLNode *minNode(AVLNode *node);
+            void cleanupAVL(AVLNode* node);
+            void toLowerCase(const char *input, char *output);
+            void heapify(Station stations[], int n, int i);
+            double calculateDistanceFromOrigin(int x, int y);
+
+        public:
+            RailNetwork();
+            ~RailNetwork();
+            void addStation(const char* name, int x, int y, int crowdDensity);
+            void addConnection();
+            int findStationIndex(const char *name);
+            void bfsTraversal(const char *startStation);
+            void dijkstra(const char *source, const char *destination);
+            void floydWarshall();
+            void kruskalMST();
+            void suggestStations(const char *input);
+            void displayStations();
+            void findValidRoute();
+            void assignPassengerToStation(const char *stationName, int crowdDensity);
+            void heapSort();
+        };
+    </div>
+</div>
+
+<script>
+    // JavaScript to make the window draggable
+    const windowElement = document.getElementById("codeWindow");
+    const header = document.getElementById("windowHeader");
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    header.onmousedown = function(event) {
+        isDragging = true;
+        offsetX = event.clientX - windowElement.getBoundingClientRect().left;
+        offsetY = event.clientY - windowElement.getBoundingClientRect().top;
+    };
+
+    document.onmousemove = function(event) {
+        if (isDragging) {
+            windowElement.style.left = event.clientX - offsetX + "px";
+            windowElement.style.top = event.clientY - offsetY + "px";
+        }
+    };
+
+    document.onmouseup = function() {
+        isDragging = false;
+    };
+</script>
+
+</body>
+</html>
 
