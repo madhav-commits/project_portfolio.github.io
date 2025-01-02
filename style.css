@@ -1,86 +1,127 @@
-/* Style file for Course Project */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design and Analysis of Algorithms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e0f7fa; /* Light cyan background */
+            color: #004d40; /* Dark teal text */
+        }
+        header {
+            background-color: #00695c; /* Rich teal */
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        nav {
+            background-color: #004d40; /* Dark teal */
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #e0f7fa; /* Light cyan */
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #f4511e; /* Bright orange */
+        }
+        h1 {
+            color: #00695c;
+            font-size: 2.5em;
+            text-align: center;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #004d40;
+            font-size: 1.8em;
+            margin-top: 20px;
+        }
+        p, ul {
+            margin: 10px 20px;
+        }
+        ul {
+            background-color: #e0f2f1; /* Soft greenish background */
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        ul li {
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Design and Analysis of Algorithms - Project Portfolio
+    </header>
+    <nav>
+        <a href="#introduction">Introduction</a>
+        <a href="#data-structures">Data Structures</a>
+        <a href="#real-world">Real-World Applications</a>
+    </nav>
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
-    background-color: #e0f7fa; /* Light cyan background */
-    color: #004d40; /* Dark teal text */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+    <section id="introduction">
+        <h1>Project Portfolio</h1>
+        <h2>What is the course about?</h2>
+        <p>This course teaches:</p>
+        <ul>
+            <li>Techniques for developing efficient algorithms.</li>
+            <li>Methods to evaluate algorithm performance using time and space complexity.</li>
+            <li>Advanced concepts like dynamic programming, greedy algorithms, divide and conquer, backtracking, and graph algorithms.</li>
+            <li>Applications of algorithms in solving real-world problems and exploring computational limitations.</li>
+        </ul>
+    </section>
 
-h1 {
-    color: #00695c; /* Rich teal */
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-}
+    <section id="data-structures">
+        <h2>What kind of data structures and algorithms have you studied?</h2>
+        <p><strong>Key data structures include:</strong></p>
+        <ul>
+            <li>Arrays, linked lists, stacks, and queues for fundamental operations.</li>
+            <li>Trees (binary, AVL, B-trees) and graphs for hierarchical and network representations.</li>
+            <li>Hash tables for efficient searching and mapping.</li>
+            <li>Heaps for priority-based operations.</li>
+        </ul>
+        <p><strong>Algorithms studied include:</strong></p>
+        <ul>
+            <li>Sorting algorithms like Quick Sort, Merge Sort, and Heap Sort.</li>
+            <li>Searching algorithms such as Binary Search.</li>
+            <li>Graph algorithms like Dijkstra’s, Kruskal’s, and Prim’s for shortest paths and minimum spanning trees.</li>
+            <li>Divide and Conquer for optimization problems.</li>
+            <li>Dynamic Programming for complex problem-solving.</li>
+        </ul>
+    </section>
 
-h2 {
-    color: #004d40; /* Dark teal */
-    font-size: 1.8em;
-    margin-top: 20px;
-    transition: color 0.3s ease;
-}
+    <section id="real-world">
+        <h2>How do you connect the course with real-time applications?</h2>
+        <p>The principles learned in this course are directly applicable to real-world scenarios:</p>
+        <ul>
+            <li><strong>Pathfinding and Navigation:</strong> Graph algorithms are used in GPS systems for finding the shortest route.</li>
+            <li><strong>Data Compression:</strong> Algorithms like Huffman coding are vital for efficient data storage and transmission.</li>
+            <li><strong>E-commerce:</strong> Sorting and searching algorithms optimize product listings and user queries.</li>
+            <li><strong>Scheduling and Resource Allocation:</strong> Dynamic programming helps in airline ticket pricing and project management.</li>
+            <li><strong>Cryptography and Security:</strong> Algorithms play a crucial role in secure data transmission.</li>
+        </ul>
+    </section>
 
-p, ul {
-    margin: 10px 0;
-    padding: 0 10px;
-    color: #004d40; /* Consistent dark teal */
-    transition: color 0.3s ease;
-}
-
-ul {
-    padding-left: 20px;
-    background-color: #e0f2f1; /* Soft greenish background */
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-ul li {
-    margin: 5px 0;
-    transition: color 0.3s ease;
-}
-
-/* Add hover effect for interactive elements */
-a {
-    color: #d84315; /* Rich orange */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #f4511e; /* Bright orange */
-}
-
-/* Box shadow and hover effect for headers */
-h1, h2 {
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-h1:hover, h2:hover {
-    background-color: #c8e6c9; /* Soft green */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* Smooth hover effect for the body */
-body:hover {
-    background-color: #ffffff;
-    color: #00251a; /* Darker teal */
-}
-
-/* Add a footer style for better visual balance */
-footer {
-    background-color: #004d40; /* Dark teal */
-    color: #ffffff; /* White text */
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 20px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-}
+    <footer>
+        &copy; 2025 Design and Analysis of Algorithms - All Rights Reserved
+    </footer>
+</body>
+</html>
