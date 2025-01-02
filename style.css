@@ -1,10 +1,15 @@
 /* Base styles */
 :root {
-    --deep-navy: #000814;
-    --rich-navy: #001D3D;
-    --medium-navy: #003566;
-    --bright-gold: #FFC300;
-    --vibrant-gold: #FFD60A;
+    --primary-bg: #f8f9fa;
+    --secondary-bg: #ffffff;
+    --primary-color: #2d3436;
+    --accent-color: #0984e3;
+    --accent-hover: #0069d9;
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+    --border-color: #dfe6e9;
+    --success-color: #00b894;
+    --shadow-color: rgba(45, 52, 54, 0.1);
 }
 
 body {
@@ -12,8 +17,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: var(--deep-navy);
-    color: var(--vibrant-gold);
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
     transition: background-color 0.3s ease;
 }
 
@@ -26,11 +31,11 @@ body {
 
 /* Navigation styles */
 nav {
-    background-color: var(--rich-navy);
+    background-color: var(--secondary-bg);
     padding: 15px 20px;
     margin-bottom: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px var(--shadow-color);
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -42,29 +47,30 @@ nav {
 }
 
 nav a {
-    color: var(--vibrant-gold);
+    color: var(--text-primary);
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 8px;
-    background: var(--medium-navy);
+    background: var(--primary-bg);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid transparent;
 }
 
 nav a:hover {
-    background-color: var(--vibrant-gold);
-    color: var(--rich-navy);
+    background-color: var(--accent-color);
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 214, 10, 0.2);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 nav a:active {
     transform: translateY(0);
+    background-color: var(--accent-hover);
 }
 
 /* Headings */
 h1, h2 {
-    color: var(--bright-gold);
+    color: var(--text-primary);
     position: relative;
     padding-bottom: 10px;
 }
@@ -83,7 +89,7 @@ h1::after {
     transform: translateX(-50%);
     width: 100px;
     height: 3px;
-    background-color: var(--vibrant-gold);
+    background-color: var(--accent-color);
     transition: width 0.3s ease;
 }
 
@@ -94,7 +100,7 @@ h1:hover::after {
 h2 {
     font-size: 2em;
     margin-top: 1.5em;
-    border-left: 4px solid var(--vibrant-gold);
+    border-left: 4px solid var(--accent-color);
     padding-left: 15px;
 }
 
@@ -107,22 +113,23 @@ ul {
 
 ul li {
     margin: 10px 0;
-    color: var(--vibrant-gold);
+    color: var(--text-secondary);
     position: relative;
     padding-left: 25px;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 ul li::before {
     content: '→';
     position: absolute;
     left: 0;
-    color: var(--bright-gold);
+    color: var(--accent-color);
     transition: transform 0.2s ease;
 }
 
 ul li:hover {
     transform: translateX(5px);
+    color: var(--text-primary);
 }
 
 ul li:hover::before {
@@ -132,14 +139,29 @@ ul li:hover::before {
 /* Paragraphs */
 p {
     margin: 15px 0;
-    color: var(--vibrant-gold);
+    color: var(--text-secondary);
     line-height: 1.8;
 }
 
 /* Strong elements */
 strong {
-    color: var(--bright-gold);
+    color: var(--accent-color);
     font-weight: 600;
+}
+
+/* Cards for content sections */
+.content-section {
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 /* Responsive Design */
@@ -173,6 +195,19 @@ html {
 
 /* Selection styling */
 ::selection {
-    background-color: var(--vibrant-gold);
-    color: var(--deep-navy);
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-bg: #1a1a1a;
+        --secondary-bg: #2d2d2d;
+        --primary-color: #ffffff;
+        --text-primary: #ffffff;
+        --text-secondary: #a0a0a0;
+        --border-color: #404040;
+        --shadow-color: rgba(0, 0, 0, 0.2);
+    }
 }
