@@ -10,6 +10,7 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
+            background-color: #f4f4f9;
         }
         h1, h2 {
             color: #2c3e50;
@@ -21,14 +22,38 @@
         ul li {
             margin: 5px 0;
         }
+        nav {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 5px;
+        }
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #2c3e50;
+        }
     </style>
 </head>
 <body>
-    <h1> Course Project</h1>
-    <h2> Design and Analysis of Algorithms</h2>
-    <h2>Introduction to the Course :</h2>
+    <nav>
+        <a href="#introduction">Project Introduction</a>
+        <a href="#course">Course Details</a>
+        <a href="#data-structures">Data Structures</a>
+        <a href="#applications">Applications</a>
+    </nav>
 
-    <h2>What is the course about?</h2>
+    <h1 id="introduction">Project Portfolio</h1>
+
+    <h2 id="course">What is the course about?</h2>
     <p>This course teaches:</p>
     <ul>
         <li>Techniques for developing efficient algorithms.</li>
@@ -37,7 +62,7 @@
         <li>Applications of algorithms in solving real-world problems and exploring computational limitations.</li>
     </ul>
 
-    <h2>What kind of data structures and algorithms have you studied?</h2>
+    <h2 id="data-structures">What kind of data structures and algorithms have you studied?</h2>
     <p><strong>Key data structures include:</strong></p>
     <ul>
         <li>Arrays, linked lists, stacks, and queues for fundamental operations.</li>
@@ -54,7 +79,7 @@
         <li>Dynamic Programming for complex problem-solving.</li>
     </ul>
 
-    <h2>How do you connect the course with real-time applications?</h2>
+    <h2 id="applications">How do you connect the course with real-time applications?</h2>
     <p>The principles learned in this course are directly applicable to real-world scenarios:</p>
     <ul>
         <li><strong>Pathfinding and Navigation:</strong> Graph algorithms are used in GPS systems for finding the shortest route.</li>
@@ -67,5 +92,3 @@
     <p>This course bridges the gap between theoretical computer science and practical problem-solving, making it invaluable for modern technology applications.</p>
 </body>
 </html>
-
-
