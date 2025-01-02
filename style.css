@@ -5,173 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design and Analysis of Algorithms</title>
     <style>
-        /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            background: linear-gradient(120deg, #fdfbfb, #ebedee); /* Subtle gradient background */
-            color: #333;
-            overflow-x: hidden;
+            background-color: #f1f8e9; /* Light greenish background for more contrast */
+            color: #263238; /* Dark grey text for high contrast */
         }
-
-        /* Header Styles */
         header {
-            background: linear-gradient(135deg, #ff6f61, #ff3d00);
-            color: white;
-            padding: 30px 20px;
+            background-color: #004d40; /* Darker teal for contrast */
+            color: #ffffff;
+            padding: 20px;
             text-align: center;
-            font-size: 2.8em;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
+            font-size: 2em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for separation */
         }
-
-        header:hover {
-            background: linear-gradient(135deg, #ff3d00, #ff6f61);
-            transform: scale(1.02);
-        }
-
-        /* Navigation Bar Styles */
         nav {
-            background-color: #00796b;
-            padding: 15px 0;
+            background-color: #00796b; /* Medium teal */
+            padding: 15px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 80px; /* Sticky below header */
-            z-index: 900;
+            transition: background-color 0.3s ease; /* Added transition for nav background */
         }
-
         nav a {
-            color: #e0f7fa;
+            color: #ffffff;
             text-decoration: none;
             margin: 0 20px;
             font-size: 1.2em;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease; /* Added transition for text and hover effect */
         }
-
         nav a:hover {
-            color: #ffeb3b;
-            transform: scale(1.1);
+            color: #ffeb3b; /* Bright yellow on hover for high contrast */
+            transform: scale(1.1); /* Slight zoom effect */
         }
-
-        /* Section Styles */
-        section {
-            padding: 60px 20px;
-            margin: 30px auto;
-            max-width: 1200px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Title and Subtitle Styles */
-        h1, h2 {
-            color: #00796b;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
         h1 {
-            font-size: 3em;
-            animation: fadeIn 2s ease-in-out;
+            color: #004d40;
+            font-size: 2.5em;
+            text-align: center;
+            margin-top: 40px;
+            text-transform: uppercase;
         }
-
         h2 {
+            color: #004d40;
             font-size: 2em;
+            margin-top: 30px;
+            transition: color 0.3s ease; /* Smooth transition for heading colors */
         }
-
-        /* Paragraph and List Styles */
+        h2:hover {
+            color: #f57c00; /* Bright orange on hover */
+        }
         p, ul {
-            margin: 15px 0;
-            font-size: 1.2em;
+            margin: 20px;
+            font-size: 1.1em;
             line-height: 1.8;
         }
-
         ul {
-            padding-left: 20px;
-            background: rgba(224, 247, 250, 0.5); /* Semi-transparent cyan */
-            border-radius: 8px;
-            list-style-type: square;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff; /* White background for contrast */
+            border-left: 5px solid #004d40; /* Border for separation */
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for ul background and zoom */
         }
-
         ul li {
             margin: 10px 0;
         }
-
-        /* Footer Styles */
+        ul:hover {
+            background-color: #f1f8e9; /* Light green hover effect */
+            transform: scale(1.02); /* Slight zoom effect on list hover */
+        }
+        section {
+            padding: 40px 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            background-color: #ffffff; /* White background for contrast */
+            transition: background-color 0.3s ease; /* Transition for section background */
+        }
+        section:hover {
+            background-color: #e0f2f1; /* Light cyan on hover */
+        }
         footer {
             background-color: #004d40;
-            color: white;
+            color: #ffffff;
             text-align: center;
-            padding: 20px;
-            font-size: 1em;
-            margin-top: 40px;
-            position: relative;
-        }
-
-        footer:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80%;
-            height: 4px;
-            background: linear-gradient(to right, #ff3d00, #ff6f61);
-        }
-
-        /* Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            nav a {
-                font-size: 1em;
-                margin: 0 10px;
-            }
-
-            section {
-                padding: 40px 15px;
-                margin: 15px;
-            }
-
-            h1 {
-                font-size: 2.4em;
-            }
-
-            h2 {
-                font-size: 1.8em;
-            }
+            padding: 15px;
+            margin-top: 30px;
+            font-size: 1.2em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
     <header>
-        Design and Analysis of Algorithms
+        Design and Analysis of Algorithms - Project Portfolio
     </header>
     <nav>
         <a href="#introduction">Introduction</a>
