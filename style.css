@@ -4,13 +4,13 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 20px;
-    background-color: #000000; /* black */
-    color: #333;
+    background-color: #e0f7fa; /* Light cyan background */
+    color: #004d40; /* Dark teal text */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
-    color: #00796b; /* Teal color */
+    color: #00695c; /* Rich teal */
     font-size: 2.5em;
     text-align: center;
     margin-bottom: 20px;
@@ -18,7 +18,7 @@ h1 {
 }
 
 h2 {
-    color: #004d40; /* Darker teal */
+    color: #004d40; /* Dark teal */
     font-size: 1.8em;
     margin-top: 20px;
     transition: color 0.3s ease;
@@ -27,11 +27,15 @@ h2 {
 p, ul {
     margin: 10px 0;
     padding: 0 10px;
+    color: #004d40; /* Consistent dark teal */
     transition: color 0.3s ease;
 }
 
 ul {
     padding-left: 20px;
+    background-color: #e0f2f1; /* Soft greenish background */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 ul li {
@@ -41,31 +45,42 @@ ul li {
 
 /* Add hover effect for interactive elements */
 a {
-    color: #ff5722; /* Deep orange */
+    color: #d84315; /* Rich orange */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ff9800; /* Lighter orange */
+    color: #f4511e; /* Bright orange */
 }
 
 /* Box shadow and hover effect for headers */
 h1, h2 {
     padding: 10px;
     border-radius: 5px;
-    background-color: #ffffff; /* White background for headers */
+    background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 h1:hover, h2:hover {
-    background-color: #b2dfdb; /* Light teal on hover */
+    background-color: #c8e6c9; /* Soft green */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Smooth hover effect for the body */
 body:hover {
-    background-color: #ffffff; /* White background on body hover */
-    color: #222;
+    background-color: #ffffff;
+    color: #00251a; /* Darker teal */
+}
+
+/* Add a footer style for better visual balance */
+footer {
+    background-color: #004d40; /* Dark teal */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
