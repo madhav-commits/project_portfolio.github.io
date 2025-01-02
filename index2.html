@@ -30,19 +30,6 @@
         tr:hover {
             background-color: #f1f1f1;
         }
-        h2 {
-            color: #ff6f61;
-        }
-        .analysis-section {
-            margin-top: 30px;
-        }
-        .analysis-section h3 {
-            color: #333;
-        }
-        .analysis-section p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
     </style>
 </head>
 <body>
@@ -138,43 +125,6 @@
             </tr>
         </tbody>
     </table>
-
-    <div class="analysis-section">
-        <h2>Efficiency Analysis</h2>
-
-        <h3>1. Introduce a new station into the rail network:</h3>
-        <p>The process involves storing the details of the new station, including its name, geographical coordinates, and crowd density, in an array. The time complexity for adding the station is O(1) since it involves appending the new station to the end of the array. The space complexity is O(n) for storing the station details in the array, where n is the total number of stations.</p>
-
-        <h3>2. Establish a new route between two existing stations:</h3>
-        <p>Adding a new route involves updating the adjacency matrix with the specified travel time or distance. This operation is performed in constant time O(1) since it directly accesses the matrix using the indices of the two stations. The space complexity remains O(n^2) for the adjacency matrix, where n is the number of stations.</p>
-
-        <h3>3. Explore the rail network starting from a chosen station:</h3>
-        <p>This functionality uses a graph traversal technique, specifically Breadth-First Search (BFS), to visit all reachable stations. The time complexity is O(V + E), where V is the number of vertices (stations) and E is the number of edges (routes). The space complexity is O(V) for the queue and the array used to track visited stations.</p>
-
-        <h3>4. Determine the best route for traveling between two stations:</h3>
-        <p>The system employs Dijkstra's Algorithm, which has a time complexity of O((V + E) log V) due to the use of a priority queue for selecting the next station. The space complexity is O(V) for storing distances and paths. This ensures efficient route optimization for passengers.</p>
-
-        <h3>5. Analyze the entire rail network to find the quickest routes:</h3>
-        <p>The Floyd-Warshall Algorithm is used for this comprehensive assessment, with a time complexity of O(V^3), where V is the number of stations. This allows for the evaluation of all pairs of stations. The space complexity is O(V^2) for the 2D array storing distances between stations.</p>
-
-        <h3>6. Update the crowd density of a station:</h3>
-        <p>Updating crowd density involves assigning a passenger to a station, which can be done in O(1) time as it directly accesses the AVL tree node for that station. The space complexity is O(n) for the AVL tree, which grows with the number of stations.</p>
-
-        <h3>7. Evaluate connections between stations for efficiency:</h3>
-        <p>This analysis uses Kruskal's Algorithm to determine the best routes based on distance. The time complexity is O(E log E) for sorting edges and O(V) for union-find operations, where E is the number of edges and V is the number of vertices. The space complexity is O(E) for storing the edge list.</p>
-
-        <h3>8. Look for stations based on a specific keyword:</h3>
-        <p>This functionality uses a brute force string matching approach resulting in a time complexity of O(n * m), where n is the number of stations and m is the average length of the station names. The space complexity is O(n) for storing the stations in an array.</p>
-
-        <h3>9. Arrange the list of stations according to proximity:</h3>
-        <p>This operation employs Heap Sort, which has a time complexity of O(n log n) for sorting the stations based on their proximity to a defined starting point. The space complexity is O(n) for storing the stations in an array.</p>
-
-        <h3>10. Show a complete list of all stations in the network:</h3>
-        <p>Displaying all stations involves iterating through the array of stations, which takes O(n) time. The space complexity remains O(n) as it corresponds to the number of stations stored in the array.</p>
-
-        <h3>11. Verify whether a direct route exists between two specified stations:</h3>
-        <p>This verification uses the adjacency matrix for constant time lookups, resulting in a time complexity of O(1). The space complexity remains O(n^2) for the adjacency matrix, where n is the number of stations.</p>
-    </div>
 
 </body>
 </html>
