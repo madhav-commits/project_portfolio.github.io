@@ -10,104 +10,141 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
-            background-color: #f7f7f7; /* Light background */
-            color: #333; /* Dark grey text */
-            padding: 0;
+            background: linear-gradient(120deg, #fdfbfb, #ebedee); /* Subtle gradient background */
+            color: #333;
+            overflow-x: hidden;
         }
 
         /* Header Styles */
         header {
-            background: linear-gradient(135deg, #ff6f61, #ff3d00); /* Gradient from coral to red */
+            background: linear-gradient(135deg, #ff6f61, #ff3d00);
             color: white;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
-            font-size: 2.5em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s ease;
+            font-size: 2.8em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
         }
 
         header:hover {
-            background: linear-gradient(135deg, #ff3d00, #ff6f61); /* Reversed gradient on hover */
+            background: linear-gradient(135deg, #ff3d00, #ff6f61);
+            transform: scale(1.02);
         }
 
         /* Navigation Bar Styles */
         nav {
-            background-color: #00796b; /* Teal */
+            background-color: #00796b;
             padding: 15px 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
+            position: sticky;
+            top: 80px; /* Sticky below header */
+            z-index: 900;
         }
 
         nav a {
-            color: #e0f7fa; /* Light cyan */
+            color: #e0f7fa;
             text-decoration: none;
             margin: 0 20px;
             font-size: 1.2em;
-            transition: color 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
-            color: #ffeb3b; /* Bright yellow on hover */
+            color: #ffeb3b;
+            transform: scale(1.1);
         }
 
         /* Section Styles */
         section {
-            padding: 40px 20px;
-            margin: 20px;
-            background-color: #ffffff; /* White background */
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
+            padding: 60px 20px;
+            margin: 30px auto;
+            max-width: 1200px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         section:hover {
-            background-color: #e0f7fa; /* Light cyan on hover */
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
         }
 
         /* Title and Subtitle Styles */
         h1, h2 {
-            color: #00796b; /* Teal */
+            color: #00796b;
             text-align: center;
             margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 2.8em;
+            font-size: 3em;
+            animation: fadeIn 2s ease-in-out;
         }
 
         h2 {
-            font-size: 1.8em;
+            font-size: 2em;
         }
 
         /* Paragraph and List Styles */
         p, ul {
             margin: 15px 0;
-            font-size: 1.1em;
+            font-size: 1.2em;
             line-height: 1.8;
         }
 
         ul {
             padding-left: 20px;
-            background-color: #e0f7fa; /* Light cyan background for lists */
-            border-radius: 5px;
+            background: rgba(224, 247, 250, 0.5); /* Semi-transparent cyan */
+            border-radius: 8px;
             list-style-type: square;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         ul li {
-            margin: 8px 0;
+            margin: 10px 0;
         }
 
         /* Footer Styles */
         footer {
-            background-color: #004d40; /* Dark teal */
+            background-color: #004d40;
             color: white;
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+            padding: 20px;
             font-size: 1em;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            position: relative;
+        }
+
+        footer:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 4px;
+            background: linear-gradient(to right, #ff3d00, #ff6f61);
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Responsive Styles */
@@ -118,23 +155,23 @@
             }
 
             section {
-                padding: 30px 15px;
+                padding: 40px 15px;
                 margin: 15px;
             }
 
             h1 {
-                font-size: 2.2em;
+                font-size: 2.4em;
             }
 
             h2 {
-                font-size: 1.5em;
+                font-size: 1.8em;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        Design and Analysis of Algorithms - Project Portfolio
+        Design and Analysis of Algorithms
     </header>
     <nav>
         <a href="#introduction">Introduction</a>
