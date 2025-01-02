@@ -1,156 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design and Analysis of Algorithms</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: #f1f8e9; /* Light greenish background for more contrast */
-            color: #263238; /* Dark grey text for high contrast */
-        }
-        header {
-            background-color: #004d40; /* Darker teal for contrast */
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            font-size: 2em;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for separation */
-        }
-        nav {
-            background-color: #00796b; /* Medium teal */
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease; /* Added transition for nav background */
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.2em;
-            transition: color 0.3s ease, transform 0.3s ease; /* Added transition for text and hover effect */
-        }
-        nav a:hover {
-            color: #ffeb3b; /* Bright yellow on hover for high contrast */
-            transform: scale(1.1); /* Slight zoom effect */
-        }
-        h1 {
-            color: #004d40;
-            font-size: 2.5em;
-            text-align: center;
-            margin-top: 40px;
-            text-transform: uppercase;
-        }
-        h2 {
-            color: #004d40;
-            font-size: 2em;
-            margin-top: 30px;
-            transition: color 0.3s ease; /* Smooth transition for heading colors */
-        }
-        h2:hover {
-            color: #f57c00; /* Bright orange on hover */
-        }
-        p, ul {
-            margin: 20px;
-            font-size: 1.1em;
-            line-height: 1.8;
-        }
-        ul {
-            background-color: #ffffff; /* White background for contrast */
-            border-left: 5px solid #004d40; /* Border for separation */
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for ul background and zoom */
-        }
-        ul li {
-            margin: 10px 0;
-        }
-        ul:hover {
-            background-color: #f1f8e9; /* Light green hover effect */
-            transform: scale(1.02); /* Slight zoom effect on list hover */
-        }
-        section {
-            padding: 40px 20px;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            background-color: #ffffff; /* White background for contrast */
-            transition: background-color 0.3s ease; /* Transition for section background */
-        }
-        section:hover {
-            background-color: #e0f2f1; /* Light cyan on hover */
-        }
-        footer {
-            background-color: #004d40;
-            color: #ffffff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-            font-size: 1.2em;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <header>
-        Design and Analysis of Algorithms - Project Portfolio
-    </header>
-    <nav>
-        <a href="#introduction">Introduction</a>
-        <a href="#data-structures">Data Structures</a>
-        <a href="#real-world">Real-World Applications</a>
-    </nav>
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Dark background */
+    color: #eaeaea; /* Light text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
 
-    <section id="introduction">
-        <h1>Project Portfolio</h1>
-        <h2>What is the course about?</h2>
-        <p>This course teaches:</p>
-        <ul>
-            <li>Techniques for developing efficient algorithms.</li>
-            <li>Methods to evaluate algorithm performance using time and space complexity.</li>
-            <li>Advanced concepts like dynamic programming, greedy algorithms, divide and conquer, backtracking, and graph algorithms.</li>
-            <li>Applications of algorithms in solving real-world problems and exploring computational limitations.</li>
-        </ul>
-    </section>
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-    <section id="data-structures">
-        <h2>What kind of data structures and algorithms have you studied?</h2>
-        <p><strong>Key data structures include:</strong></p>
-        <ul>
-            <li>Arrays, linked lists, stacks, and queues for fundamental operations.</li>
-            <li>Trees (binary, AVL, B-trees) and graphs for hierarchical and network representations.</li>
-            <li>Hash tables for efficient searching and mapping.</li>
-            <li>Heaps for priority-based operations.</li>
-        </ul>
-        <p><strong>Algorithms studied include:</strong></p>
-        <ul>
-            <li>Sorting algorithms like Quick Sort, Merge Sort, and Heap Sort.</li>
-            <li>Searching algorithms such as Binary Search.</li>
-            <li>Graph algorithms like Dijkstra’s, Kruskal’s, and Prim’s for shortest paths and minimum spanning trees.</li>
-            <li>Divide and Conquer for optimization problems.</li>
-            <li>Dynamic Programming for complex problem-solving.</li>
-        </ul>
-    </section>
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #4caf50; /* Green highlight */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
 
-    <section id="real-world">
-        <h2>How do you connect the course with real-time applications?</h2>
-        <p>The principles learned in this course are directly applicable to real-world scenarios:</p>
-        <ul>
-            <li><strong>Pathfinding and Navigation:</strong> Graph algorithms are used in GPS systems for finding the shortest route.</li>
-            <li><strong>Data Compression:</strong> Algorithms like Huffman coding are vital for efficient data storage and transmission.</li>
-            <li><strong>E-commerce:</strong> Sorting and searching algorithms optimize product listings and user queries.</li>
-            <li><strong>Scheduling and Resource Allocation:</strong> Dynamic programming helps in airline ticket pricing and project management.</li>
-            <li><strong>Cryptography and Security:</strong> Algorithms play a crucial role in secure data transmission.</li>
-        </ul>
-    </section>
+header h1:hover {
+    color: #ff5722; /* Vibrant orange */
+    transform: scale(1.1);
+}
 
-    <footer>
-        &copy; 2025 Design and Analysis of Algorithms - All Rights Reserved
-    </footer>
-</body>
-</html>
+header p {
+    font-size: 1.3rem;
+    color: #cddc39; /* Lime */
+    margin-top: 10px;
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+header p:hover {
+    color: #ffc107; /* Amber */
+    letter-spacing: 1px;
+}
+
+section {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    padding: 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #4caf50, #009688); /* Green gradient */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+article {
+    margin-bottom: 25px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+article:hover {
+    transform: scale(1.02);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+article h2 {
+    font-size: 2rem;
+    color: #2196f3; /* Blue */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ff5722; /* Orange underline */
+    padding-bottom: 5px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+article h2:hover {
+    color: #ff5722; /* Orange */
+    border-bottom: 2px solid #2196f3; /* Blue underline */
+}
+
+article p {
+    font-size: 1.2rem;
+    color: #eaeaea;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    transition: opacity 0.3s ease;
+}
+
+article p:hover {
+    opacity: 0.85;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    color: #cddc39; /* Lime */
+    transition: margin-left 0.3s ease;
+}
+
+ul li {
+    margin-bottom: 12px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+ul li:hover {
+    color: #ff5722; /* Orange */
+    font-size: 1.1rem;
+}
+
+blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #ffc107; /* Amber */
+    border-left: 5px solid #4caf50; /* Green */
+    padding-left: 20px;
+    margin-top: 25px;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+blockquote:hover {
+    color: #4caf50; /* Green */
+    border-color: #ffc107; /* Amber */
+}
+
+a {
+    color: #03a9f4; /* Cyan */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: #ff5722; /* Orange */
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    article h2 {
+        font-size: 1.7rem;
+    }
+
+    article p {
+        font-size: 1.1rem;
+    }
+
+    blockquote {
+        font-size: 1.1rem;
+    }
+}
