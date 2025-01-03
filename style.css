@@ -1,111 +1,244 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design and Analysis of Algorithms</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #121212; /* Dark gray background */
-            color: #E0E0E0; /* Off-white text */
-        }
-        h1, h2 {
-            color: #4FC3F7; /* Light blue accent */
-        }
-        h1 {
-            font-size: 2.5em;
-        }
-        h2 {
-            font-size: 2em;
-        }
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-        ul li {
-            margin: 5px 0;
-            color: #B0BEC5; /* Muted grayish-blue */
-        }
-        nav {
-            background-color: #1E88E5; /* Medium blue */
-            color: #E0E0E0; /* Off-white */
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-        }
-        nav a {
-            color: #E0E0E0; /* Off-white */
-            text-decoration: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            background: #1565C0; /* Darker blue */
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #4FC3F7; /* Light blue */
-            color: #121212; /* Dark background for contrast */
-        }
-        p {
-            margin: 10px 0;
-            color: #E0E0E0; /* Off-white */
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <a href="index1.html">Project Introduction</a>
-        <a href="index2.html">Business Case Studies Identified</a>
-        <a href="index3.html">Efficiency Analysis</a>
-        <a href="index4.html">Code Snippets</a>
-        <a href="index5.html">Individual Work</a>
-    </nav>
+/* Base styles */
+:root {
+    --bg-dark: #121212;
+    --accent-primary: #ff6b6b;
+    --accent-secondary: #7d5fff;  /* Changed from yellow to purple */
+    --text-primary: #f2f2f2;
+    --text-secondary: rgba(242, 242, 242, 0.8);
+    --gradient-primary: linear-gradient(45deg, #ff6b6b, #7d5fff);  /* Updated gradient */
+    --card-bg: rgba(0, 0, 0, 0.5);
+}
 
-    <h1 id="introduction">Project Portfolio</h1>
+/* Rest of the base styles remain the same */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.6;
+}
 
-    <h2 id="course">What is the course about?</h2>
-    <p>This course teaches:</p>
-    <ul>
-        <li>Techniques for developing efficient algorithms.</li>
-        <li>Methods to evaluate algorithm performance using time and space complexity.</li>
-        <li>Advanced concepts like dynamic programming, greedy algorithms, divide and conquer, backtracking, and graph algorithms.</li>
-        <li>Applications of algorithms in solving real-world problems and exploring computational limitations.</li>
-    </ul>
+/* Navigation */
+nav {
+    background: var(--card-bg);
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
 
-    <h2 id="data-structures">What kind of data structures and algorithms have you studied?</h2>
-    <p><strong>Key data structures include:</strong></p>
-    <ul>
-        <li>Arrays, linked lists, stacks, and queues for fundamental operations.</li>
-        <li>Trees (binary, AVL, B-trees) and graphs for hierarchical and network representations.</li>
-        <li>Hash tables for efficient searching and mapping.</li>
-        <li>Heaps for priority-based operations.</li>
-    </ul>
-    <p><strong>Algorithms studied include:</strong></p>
-    <ul>
-        <li>Sorting algorithms like Quick Sort, Merge Sort, and Heap Sort.</li>
-        <li>Searching algorithms such as Binary Search.</li>
-        <li>Graph algorithms like Dijkstra’s, Kruskal’s, and Prim’s for shortest paths and minimum spanning trees.</li>
-        <li>Divide and Conquer for optimization problems.</li>
-        <li>Dynamic Programming for complex problem-solving.</li>
-    </ul>
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: rgba(255, 107, 107, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
 
-    <h2 id="applications">How do you connect the course with real-time applications?</h2>
-    <p>The principles learned in this course are directly applicable to real-world scenarios:</p>
-    <ul>
-        <li><strong>Pathfinding and Navigation:</strong> Graph algorithms are used in GPS systems for finding the shortest route.</li>
-        <li><strong>Data Compression:</strong> Algorithms like Huffman coding are vital for efficient data storage and transmission.</li>
-        <li><strong>E-commerce:</strong> Sorting and searching algorithms optimize product listings and user queries.</li>
-        <li><strong>Scheduling and Resource Allocation:</strong> Dynamic programming helps in airline ticket pricing and project management.</li>
-        <li><strong>Cryptography and Security:</strong> Algorithms play a crucial role in secure data transmission.</li>
-    </ul>
+nav a:hover {
+    background: var(--gradient-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(125, 95, 255, 0.2);  /* Updated shadow color */
+}
 
-    <p>This course bridges the gap between theoretical computer science and practical problem-solving, making it invaluable for modern technology applications.</p>
-</body>
-</html>
+/* Main heading */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    text-align: center;
+    margin-bottom: 40px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+h1:hover {
+    color: var(--accent-secondary);
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+h1:hover::after {
+    width: 150px;
+}
+
+/* Section headings */
+h2 {
+    font-size: 1.8rem;
+    color: var(--accent-primary);
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+    padding-left: 15px;
+    border-left: 4px solid var(--accent-secondary);
+}
+
+h2:hover {
+    color: var(--accent-secondary);
+}
+
+/* Content sections */
+.content-section {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 25px 0;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(125, 95, 255, 0.15);  /* Updated shadow color */
+}
+
+.content-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.content-section:hover::before {
+    opacity: 1;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+ul li {
+    margin: 12px 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 25px;
+    transition: all 0.3s ease;
+}
+
+ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+ul li:hover {
+    color: var(--text-primary);
+    transform: translateX(5px);
+}
+
+ul li:hover::before {
+    color: var(--accent-secondary);
+    transform: translateX(3px);
+}
+
+/* Paragraphs */
+p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+}
+
+p:hover {
+    color: var(--text-primary);
+}
+
+/* Strong elements */
+strong {
+    color: var(--accent-primary);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+strong:hover {
+    color: var(--accent-secondary);
+}
+
+/* Selection styling */
+::selection {
+    background: var(--accent-primary);
+    color: #fff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-secondary);
+}
